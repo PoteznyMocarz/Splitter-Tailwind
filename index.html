@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="custom-styles.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body class="flex p-[85px] flex-col h-screen items-center justify-evenly font-SpaceMono bg-light-grayish-cyan max-[440px]:h-fit max-[440px]:p-0">
+  <div class="max-[440px]:p-[30px]">
+    <h1 class="uppercase tracking-[8px] text-[25px] text-very-dark-cyan opacity-[0.85]"><span class="block">spli</span class="block">tter</h1>
+  </div>
+  <div class="grid gap-[40px] grid-cols-2 max-w-[950px] overflow-hidden rounded-[20px] bg-white-neutral p-[40px] max-[440px]:grid-cols-1 max-[440px]:h-[80%] max-[440px]:self-end max-[440px]:p-[30px]">
+  <div class="bg-white-neutral">
+    <label class="text-dark-grayish-cyan" for="billAmount">Bill</label>
+    <div class="relative">
+      <label for="billAmount" class="absolute top-[50%] translate-y-[-50%] left-4"><img src="images/icon-dollar.svg" alt=""></label>
+      <input class="bg-very-light-grayish-cyan rounded-[7px] flex border-[2px] border-opacity-color focus:border-[2px] focus:border-strong-cyan outline-none p-[20px] py-[4px] w-[100%] mt-2 text-right text-very-dark-cyan placeholder:text-grayish-cyan placeholder:opacity-90 placeholder:mr-[5px] placeholder:text-[22px] text-[23px]" id="billAmount" type="number" inputmode="numeric" placeholder="0">
+    </div>
+    <span class="text-dark-grayish-cyan mt-[30px] block">Select Tip %</span>
+    <div class="grid grid-cols-3 gap-[16px] mt-[15px] max-[440px]:grid-cols-2">
+      <span class="tipPerc h-fit text-center bg-very-dark-cyan py-[8px] rounded-[6px] text-white-neutral text-[22px] hover:bg-strong-cyan hover:text-very-dark-cyan cursor-pointer">5%</span>
+      <span class="tipPerc h-fit text-center bg-very-dark-cyan py-[8px] rounded-[6px] text-white-neutral text-[22px] hover:bg-strong-cyan hover:text-very-dark-cyan cursor-pointer">10%</span>
+      <span class="tipPerc h-fit text-center bg-very-dark-cyan py-[8px] rounded-[6px] text-white-neutral text-[22px] hover:bg-strong-cyan hover:text-very-dark-cyan cursor-pointer">15%</span>
+      <span class="tipPerc h-fit text-center bg-very-dark-cyan py-[8px] rounded-[6px] text-white-neutral text-[22px] hover:bg-strong-cyan hover:text-very-dark-cyan cursor-pointer">25%</span>
+      <span class="tipPerc h-fit text-center bg-very-dark-cyan py-[8px] rounded-[6px] text-white-neutral text-[22px] hover:bg-strong-cyan hover:text-very-dark-cyan cursor-pointer">50%</span>
+      <input class="text-right h-fit bg-very-light-grayish-cyan py-[6px] rounded-[6px] text-very-dark-cyan text-[22px] placeholder:text-dark-grayish-cyan placeholder:text-center p-[10px] border-[2px] border-opacity-color focus:border-[2px] focus:border-strong-cyan outline-none" type="number" inputmode="numeric" placeholder="Custom" id="percTipCustom">
+    </div>
+
+    <label class="text-dark-grayish-cyan mt-[35px] block" for="peopleNumber">Number of People</label>
+    <div class="relative">
+      <label for="peopleNumber" class="absolute top-[50%] translate-y-[-50%] left-4"><img src="images/icon-person.svg" alt=""></label>
+      <input class="bg-very-light-grayish-cyan rounded-[7px] flex border-[2px] border-opacity-color focus:border-[2px] focus:border-strong-cyan outline-none p-[20px] py-[4px] w-[100%] mt-2 text-right text-very-dark-cyan placeholder:text-grayish-cyan placeholder:opacity-90 placeholder:mr-[5px] placeholder:text-[22px] text-[23px]" id="peopleNumber" type="number" inputmode="numeric" placeholder="0">
+    </div>
+  </div>
+
+  <div class="bg-very-dark-cyan p-[10%] rounded-[13px]">
+    <div class="flex h-fit items-center justify-between">
+      <div class="flex flex-col">
+        <span class="text-white-neutral text-[20px] max-[440px]:text-[16px]">Tip Amount</span>
+        <span class="text-[17px] text-grayish-cyan max-[440px]:text-[14px]">/ person</span>
+      </div>
+      <span class="text-strong-cyan text-[43px] max-[440px]:text-[35px]">$<span id="tipAmount">0.00</span></span>
+    </div>
+
+    <div class="flex h-fit items-center justify-between mt-[35px]">
+      <div class="flex flex-col">
+        <span class="text-white-neutral text-[20px] max-[440px]:text-[16px]">Total</span>
+        <span class="text-[17px] text-grayish-cyan max-[440px]:text-[14px]">/ person</span>
+      </div>
+      <span class="text-strong-cyan text-[43px] max-[440px]:text-[35px]">$<span id="totalAmount">0.00</span></span>
+    </div>
+    <button id="resetBtn" class="mt-[120px] uppercase w-full bg-very-light-grayish-cyan rounded-[5px] py-[8px] text-[20px] text-very-dark-cyan opacity-20 text-opacity-30 max-[440px]:mt-[25px]">Reset</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

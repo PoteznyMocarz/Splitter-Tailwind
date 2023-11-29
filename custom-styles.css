@@ -1,0 +1,20 @@
+.reset-active {
+    background-color: hsl(172, 67%, 45%);
+    opacity: 1;
+    --tw-text-opacity: 1;
+}
+
+.reset-active:hover {
+    background-color: hsl(172, 77%, 54%);
+}
+
+.tipActive {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
